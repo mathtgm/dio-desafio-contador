@@ -7,33 +7,22 @@ var subtrair = document.getElementsByName('subtrair');
 adicionar[0].addEventListener("click", increment);
 subtrair[0].addEventListener("click", decrement);
 
-function verificarBtn() {
-    if((currentNumber + 1) > 10) {
-        document.getElementsByName("adicionar")[0].disabled = true;
+function verificarContador() {
+    if(currentNumber < 0) {
+        currentNumberWrapper.style.color = 'red';
     } else {
-        document.getElementsByName("adicionar")[0].disabled = false;
-    }
-
-    if((currentNumber - 1) < 0) {
-        document.getElementsByName('subtrair')[0].disabled = true;
-    } else {
-        document.getElementsByName('subtrair')[0].disabled = false;
+        currentNumberWrapper.style.color = 'black';
     }
 }
 
 function increment() {
-    if(currentNumber < 10) {
-        currentNumber++;
-       verificarBtn();
-    }
+    currentNumber++;
     currentNumberWrapper.innerHTML = currentNumber;
+    verificarContador();
 }
 
 function decrement() {
-    if(currentNumber > 0) {
-        currentNumber--;
-        verificarBtn();
-    }
-    
+    currentNumber--;
     currentNumberWrapper.innerHTML = currentNumber;
+    verificarContador();
 }
