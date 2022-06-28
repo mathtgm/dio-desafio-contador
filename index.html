@@ -5,14 +5,17 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <h1>Contador</h1>
-    <p>Clique nos botões para alterar os valores</p>
+    <div class="contador">
+        <h1>Contador de até 10</h1>
+        <p>Clique nos botões para alterar os valores</p>
 
-    <div id="counter">
-        <button name="subtrair" onclick="decrement()">-</button>
-        <span id="currentNumber">0</span>
-        <button name="adicionar" onclick="increment()">+</button>
+        <div id="counter">
+            <button name="subtrair">-</button>
+            <span id="currentNumber">0</span>
+            <button name="adicionar">+</button>
+        </div>
     </div>
+    
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
